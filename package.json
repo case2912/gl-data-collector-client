@@ -1,0 +1,16 @@
+{
+  "name": "gl-data-collector-client",
+  "version": "1.0.0",
+  "description": "gl-data-collector-client",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "author": "case2912",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "rollup": "^0.31.2",
+    "rollup-plugin-babel": "^2.5.1",
+    "rollup-plugin-uglify": "^1.0.0"
+  }
+}
