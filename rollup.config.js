@@ -3,7 +3,7 @@ import uglify from 'rollup-plugin-uglify';
 import typescript from 'rollup-plugin-typescript';
 export default {
     entry: 'src/index.ts',
-    dest: 'bundle.js',
+    dest: 'dist/bundle.js',
     plugins: [
         typescript(),
         babel(),
