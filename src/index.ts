@@ -50,7 +50,7 @@ const collector = () => {
         domain: document.domain
     };
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://wglstat.herokuapp.com/record");
+    xhr.open("POST", "http://wglstat.grimoire.gl/record");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(JSON.stringify(data));
 };
