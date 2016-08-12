@@ -3,7 +3,7 @@ import uuid from "./uuid";
 import cookie from "./cookie";
 const collector = () => {
     const canvas = document.createElement("canvas");
-    const gl = <WebGLRenderingContext>canvas.getContext("webgl");
+    const gl = <WebGLRenderingContext>(canvas.getContext("webgl") || canvas.getContext("experimental-webgl"));
     const extensionsResult = {};
     for (let i = 0; i < target.extensions.length; i++) {
         extensionsResult[target.extensions[i]] = gl.getExtension(target.extensions[i]) !== null;
@@ -49,6 +49,7 @@ const collector = () => {
         parameters: parametersResult,
         domain: document.domain
     };
+    console.log(data);
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "http://wglstat.grimoire.gl/record");
     xhr.setRequestHeader("Content-Type", "application/json");
